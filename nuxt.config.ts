@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   
   app: {
-    baseURL: '/wide-test/', // Replace 'wide-test' with your actual repo name
+    baseURL: '/which-alejandro/',
     buildAssetsDir: 'assets/'
   },
   
