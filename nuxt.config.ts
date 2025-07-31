@@ -1,9 +1,13 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  
-  ssr: false,
   app: {
-    baseUrl: '/which-alejandro/',
+    baseURL: '/which-alejandro/',
+    buildAssetsDir: '_nuxt/'    
+  },
+  nitro: {
+    preset: 'static'
+  },
+  routeRules: {
+    // optional but helps ensure 404s redirect to index.html
+    '/**': { static: true }
   }
 })
