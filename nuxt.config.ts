@@ -12,9 +12,9 @@ export default defineNuxtConfig({
   
   app: {
     baseURL: '/which-alejandro/',
-    buildAssetsDir: 'assets/'
+    buildAssetsDir: '_nuxt/',
+    cdnURL: '/which-alejandro/'
   },
   
-  ssr: false, // Disable server-side rendering for GitHub Pages
-  target: 'static'
+  ssr: false // Disable server-side rendering for GitHub Pages
 })

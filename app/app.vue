@@ -3,7 +3,7 @@
     <!-- Floating background images -->
     <div class="floating-background">
       <img v-for="n in 12" :key="n" 
-           src="/wides/chillwide.png" 
+           :src="getAssetUrl('/wides/chillwide.png')" 
            :class="`floating-wide floating-wide-${n}`"
            alt="Floating Wide" />
     </div>
@@ -57,7 +57,7 @@
       
       <h1 class="result-title">Your Wide Type:</h1>
       <div class="result-card">
-        <img :src="result.image" :alt="result.title" class="result-image" />
+        <img :src="getAssetUrl(result.image)" :alt="result.title" class="result-image" />
         <h2 class="result-name">{{ result.title }}</h2>
         <p class="result-description">{{ result.description }}</p>
         
@@ -224,6 +224,17 @@ const resetQuiz = () => {
   };
   showResult.value = false;
   result.value = null;
+};
+
+// Helper function to get proper asset URLs for GitHub Pages
+const getAssetUrl = (path: string) => {
+  // In development, use the path as-is
+  if (process.dev) {
+    return path;
+  }
+  // In production (GitHub Pages), prepend the base URL
+  const baseURL = '/which-alejandro';
+  return path.startsWith('/') ? baseURL + path : path;
 };
 </script>
 
