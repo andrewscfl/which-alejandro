@@ -11,9 +11,9 @@ export default defineNuxtConfig({
   },
   
   app: {
-    baseURL: '/which-alejandro/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/which-alejandro/' : '/',
     buildAssetsDir: '_nuxt/',
-    cdnURL: '/which-alejandro/'
+    cdnURL: process.env.NODE_ENV === 'production' ? '/which-alejandro/' : undefined
   },
   
   ssr: false // Disable server-side rendering for GitHub Pages
