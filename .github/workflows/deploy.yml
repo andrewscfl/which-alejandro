@@ -45,6 +45,9 @@ jobs:
 
       - name: Generate static site with Nuxt
         run: npm run generate
+        env:
+          NODE_ENV: production
+          NUXT_APP_BASE_URL: /which-alejandro/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
