@@ -366,10 +366,9 @@ body {
 .quiz-section, .result-section {
   position: relative;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 20px;
   padding: 20px;
-  backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
@@ -447,12 +446,11 @@ body {
 }
 
 .question-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255);
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   border: 2px solid rgba(240, 240, 240, 0.8);
-  backdrop-filter: blur(10px);
 }
 
 .question-text {
@@ -477,14 +475,10 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
-  backdrop-filter: blur(5px);
 }
 
 .answer-button:hover {
-  background: rgba(248, 249, 250, 0.95);
   border-color: #007bff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,123,255,0.2);
 }
 
 .result-section {
@@ -503,7 +497,6 @@ body {
   padding: 40px;
   box-shadow: 0 6px 30px rgba(0,0,0,0.15);
   border: 3px solid rgba(240, 240, 240, 0.8);
-  backdrop-filter: blur(10px);
 }
 
 .result-image {
