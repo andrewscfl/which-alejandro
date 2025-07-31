@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   
-  target: 'static',
-  router: {
-    base: '/which-alejandro/'
+  ssr: false,
+  app: {
+    baseUrl: '/which-alejandro/',
   }
 })
