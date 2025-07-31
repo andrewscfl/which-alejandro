@@ -365,7 +365,7 @@ body {
 
 .quiz-section, .result-section {
   position: relative;
-  z-index: 1;
+  z-index: 100;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   padding: 20px;
