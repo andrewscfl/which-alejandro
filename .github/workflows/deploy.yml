@@ -36,8 +36,13 @@ jobs:
         with:
           static_site_generator: nuxt
           
+      - name: Clean npm cache
+        run: npm cache clean --force
+          
       - name: Install dependencies
-        run: npm install
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
         
       - name: Build with Nuxt
         run: npm run build
