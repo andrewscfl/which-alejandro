@@ -144,7 +144,7 @@ const view = ref<'menu' | 'quiz' | 'pooks'>('menu');
 
 // Pooks countdown — arrival: Aug 8 2026 6PM ET, journey starts Aug 4 2026
 const POOKS_START = new Date('2026-08-04T00:00:00-04:00').getTime();
-const POOKS_ARRIVAL = new Date('2026-08-08T18:00:00-04:00').getTime();
+const POOKS_ARRIVAL = new Date('2026-08-08T11:00:00-04:00').getTime();
 const now = ref(Date.now());
 let pooksTimer: ReturnType<typeof setInterval> | undefined;
 
